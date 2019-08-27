@@ -26,6 +26,14 @@ else
 end
 fprintf(fileID,'outputs  = [(''output'',%i)]\n\n',output_size);
 
+% Define Comment
+link = 'https://github.com/feippolito/NSEElib/tree/master/MATLAB/%2Bcompile';
+fprintf(fileID, '\t''''''\n');
+fprintf(fileID, '\tThis code was automatically generated from the simulink subsystem ''%s''.\n',block_name);
+fprintf(fileID, '\n\tFor more information on how this code was generated access:\n');
+fprintf(fileID, '\t%s - pycreate.m\n',link);
+fprintf(fileID, '\n\tGenerated on %s.\n',date);
+fprintf(fileID, '\t''''''\n\n');
 
 fprintf(fileID,'def Initialize():\n');
 fprintf(fileID,'\t%s_initialize()\n\n',block_name);

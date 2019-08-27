@@ -21,6 +21,17 @@ fprintf(fileID,'\tvoid %s_terminate()\n\n',block_name);
 fprintf(fileID, 'outputs = [None] * %i\n\n', output_size);
 % Define Class
 fprintf(fileID, 'class %sObj: \n\n', alias);
+% Define Comment
+link = 'https://github.com/feippolito/NSEElib/tree/master/MATLAB/%2Bcompile';
+fprintf(fileID, '\t''''''\n');
+fprintf(fileID, '\tThis class was automatically generated from the simulink subsystem ''%s''.\n',block_name);
+fprintf(fileID, '\n\tFor more information on how this code was generated access:\n');
+fprintf(fileID, '\t%s - pycreate.m\n',link);
+fprintf(fileID, '\n\tGenerated on %s.\n',date);
+fprintf(fileID, '\t''''''\n\n');
+%Define Init
+fprintf(fileID, '\tdef __init__(self):\n');
+fprintf(fileID, '\t\tpass\n\n');
 % Define Start
 fprintf(fileID, '\tdef start():\n');
 fprintf(fileID, '\t\t%s_initialize()\n\n', block_name);
