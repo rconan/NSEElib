@@ -106,7 +106,7 @@ block_name = string(split_string(2)); % Block name
 
 %% Subsystem compilation
 
-%rtwbuild(simulink_block, 'OpenBuildStatusAutomatically', false);
+rtwbuild(simulink_block, 'OpenBuildStatusAutomatically', false);
 
 close_system(filename);
 
@@ -131,7 +131,7 @@ end
 controller_path = cd;
 h_path = controller_path + "\" + block_name + ".h";
 
-[reference_size, feedback_size, output_size] = GetSizes(h_path, 'Reference','Feedback','Output');
+[reference_size, feedback_size, output_size] = utils.GetSizes(h_path, 'Reference','Feedback','Output');
 
 %% Check for _data.o file
 
