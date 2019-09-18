@@ -18,7 +18,7 @@ function pycreate(blockname, Ts, flag_class, pyversion, pypath)
   
     - Inputs: 
               - blockname (str): the name of the block on simuLink. Make
-                   shure that one have no special characteres such 'space', 
+                   sure that one have no special characteres such 'space', 
                    '*', '/' ... and so on.
               
               - Ts (num): the block sampling time in seconds.
@@ -48,7 +48,7 @@ function pycreate(blockname, Ts, flag_class, pyversion, pypath)
 
   =================================================================== 
 
-    Observations: to make shure that everything will be fine, we advise
+    Observations: to make sure that everything will be fine, we advise
         that you use an unix operational system, due to the simple
         technique of making the directory with !make and the structure
         provided by gcc GNU compiler.
